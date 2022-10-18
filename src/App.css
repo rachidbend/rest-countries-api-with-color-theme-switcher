@@ -1,2 +1,15 @@
 .App {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.counrty__preview {
+  border: 2px solid blue;
+  width: 260px;
+}
+.country__flag--small {
+  width: 40px;
+  height: auto;
 }

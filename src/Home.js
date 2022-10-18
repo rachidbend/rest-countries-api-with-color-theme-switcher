@@ -7,13 +7,20 @@ import { ThemeProvider } from './ThemeContext';
 export const Home = () => {
   const countries = React.useContext(CountriesContext);
 
+  if (!countries) return;
+
   return (
     <>
       <ThemeProvider>
         {<p>{countries[1]?.name.common}</p>}
         {countries.map(country => (
           <>
-            <li key={country?.name.common}>
+            <li className="counrty__preview" key={country?.name.common}>
+              <img
+                className="country__flag--small"
+                src={country?.flags.png}
+                alt={country.name.common + ' flag'}
+              />
               <p>{country?.name.common}</p>
               <Link
                 to={{

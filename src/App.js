@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Card } from './Card';
+import { FullView } from './FullView';
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './Home';
+import { Header } from './Header';
 
 export const CountriesContext = React.createContext();
 
@@ -17,7 +18,8 @@ function App() {
       .then(data => {
         setCountries(data);
       });
-    console.log(countries);
+
+    // https://restcountries.com/v3.1/name/morocco
     // make a context to share the data that i get from the api
     // display all the countries when at first
     // make so when a country is clicked you get routed to a page that shows more info about the country you selected
@@ -31,6 +33,7 @@ function App() {
           path={'/'}
           element={
             <CountriesContext.Provider value={countries}>
+              <Header />
               <Home />
             </CountriesContext.Provider>
           }
@@ -39,7 +42,7 @@ function App() {
           path={'/countries/:country'}
           element={
             <CountriesContext.Provider value={countries}>
-              <Card />
+              <FullView />
             </CountriesContext.Provider>
           }
         />

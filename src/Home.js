@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { CountriesContext } from './App';
-import { Card } from './component';
+import { Preview } from './Preview';
 import { ThemeProvider } from './ThemeContext';
 
 export const Home = () => {
@@ -12,27 +11,11 @@ export const Home = () => {
   return (
     <>
       <ThemeProvider>
-        {<p>{countries[1]?.name.common}</p>}
-        {countries.map(country => (
-          <>
-            <li className="counrty__preview" key={country?.name.common}>
-              <img
-                className="country__flag--small"
-                src={country?.flags.png}
-                alt={country.name.common + ' flag'}
-              />
-              <p>{country?.name.common}</p>
-              <Link
-                to={{
-                  pathname: `/countries/${country?.name.common}`,
-                }}
-              >
-                Click here
-              </Link>
-            </li>
-          </>
-        ))}
-        <Card />
+        <div className="countries__container">
+          {countries.map(country => (
+            <Preview country={country} />
+          ))}
+        </div>
       </ThemeProvider>
     </>
   );

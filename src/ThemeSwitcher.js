@@ -1,6 +1,6 @@
 import { useTheme, useUpdateTheme } from './ThemeContext';
 
-export const Card = () => {
+export const ThemeSwitcher = () => {
   const darkTheme = useTheme();
   const toggleDarkTheme = useUpdateTheme();
 

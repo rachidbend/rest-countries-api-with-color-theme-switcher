@@ -4,6 +4,7 @@ import { FullView } from './FullView';
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './Home';
 import { Header } from './Header';
+import { RegionFilter } from './RegionFilter';
 
 export const CountriesContext = React.createContext();
 
@@ -42,18 +43,31 @@ function App() {
           path={'/countries/:country'}
           element={
             <CountriesContext.Provider value={countries}>
+              <Header />
+
               <FullView />
             </CountriesContext.Provider>
           }
         />
         <Route
-          path={'/filter/:filter'}
+          path={'/region/:region'}
           element={
             <CountriesContext.Provider value={countries}>
+              <Header />
               <Home />
             </CountriesContext.Provider>
           }
         />
+
+        <Route
+          path={'/search/:search'}
+          element={
+            <CountriesContext.Provider value={countries}>
+              <Header />
+              <Home />
+            </CountriesContext.Provider>
+          }
+        ></Route>
       </Routes>
     </div>
   );

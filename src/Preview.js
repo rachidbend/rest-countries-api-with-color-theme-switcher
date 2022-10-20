@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Preview.css';
 
 export const Preview = props => {
   const country = props.country;
@@ -10,7 +11,7 @@ export const Preview = props => {
       <div className="preview" key={country.cioc}>
         <Link
           to={{
-            pathname: `countries/${country.name.common}`,
+            pathname: `/countries/${country.name.common}`,
           }}
         >
           <img

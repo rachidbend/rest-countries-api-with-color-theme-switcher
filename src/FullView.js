@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { CountriesContext } from './App';
+import './Fullview.css';
 
 export const FullView = () => {
   const countries = React.useContext(CountriesContext);

@@ -1,5 +1,5 @@
 .App {
-  background-color: #fafafa;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .countries__container {
@@ -8,26 +8,6 @@
   flex-direction: row;
   gap: 75px;
   padding: 0 80px;
-}
-
-.preview {
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.04);
-  width: 265px;
-  background-color: #fff;
-  font-family: sans-serif;
-}
-.preview__flag {
-  width: 100%;
-  height: auto;
-}
-.preview a {
-  text-decoration: none;
-}
-.preview h3 {
-  margin-bottom: 12px;
-}
-.preview p {
-  margin-bottom: 6px;
 }
 
 .preview__info {

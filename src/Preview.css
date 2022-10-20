@@ -17,3 +17,12 @@
 .preview p {
   margin-bottom: 6px;
 }
+
+.theme-dark .preview {
+  background-color: #2b3743;
+  box-shadow: 0 10px 10px #1e2b34;
+}
+
+.theme-dark .preview__info {
+  color: #fff;
+}

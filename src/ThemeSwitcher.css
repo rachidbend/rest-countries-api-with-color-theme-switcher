@@ -1,0 +1,30 @@
+.theme__switcher {
+}
+
+.btn--theme {
+  /* border: 1px solid black; */
+  padding: 4px 8px;
+  padding-right: 0;
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+}
+
+.btn--theme p {
+  display: flex;
+  align-items: center;
+}
+
+.icon--theme {
+  width: 18px;
+  margin-right: 9px;
+}
+
+.theme-dark .btn--theme {
+  color: #fff;
+}
+
+.icon--theme-light {
+  width: 20px;
+  margin-right: 8px;
+}

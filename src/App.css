@@ -1,34 +1,28 @@
 .App {
   background-color: hsl(0, 0%, 98%);
+  /* font-family: 'Nunito Sans', sans-serif; */
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .countries__container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 75px;
+  gap: 74px;
   padding: 0 80px;
-}
-
-.preview__info {
-  padding: 24px;
-  color: #000;
 }
 
 .country__border {
   color: #000;
   margin-right: 6px;
   padding: 6px 12px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   text-decoration: none;
-}
-
-.header {
-  /* border-bottom: 2px solid #000; */
-  box-shadow: 0 6px 6px #efefef;
-
-  margin-bottom: 80px;
-  background-color: #fff;
 }
 
 .theme-dark {
@@ -37,9 +31,4 @@
 }
 .theme-dark a {
   color: #fbffff;
-}
-
-.theme-dark .header {
-  background-color: #202d36;
-  box-shadow: 0 6px 6px #1e2b34;
 }

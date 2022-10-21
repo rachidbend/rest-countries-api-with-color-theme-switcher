@@ -25,11 +25,10 @@ export const Home = () => {
   // if a region was selected, we'd get the countries that are in that region
   if (region) {
     filterdCountries = countries.filter(country => {
+      // console.log(country.region === region);
       return country.region === region;
     });
   }
-  // and if no region was selected, we'd show all the countries
-  if (!region) filterdCountries = countries;
 
   if (search.country) {
     filterdCountries = countries.filter(country => {
@@ -37,13 +36,12 @@ export const Home = () => {
         .toLowerCase()
         .includes(search.country.toLowerCase(), 0);
     });
-
-    // filterdCountries = countries.filter(country => {
-    //   return [...country.name.common].indludes(search.country);
-    // });
   }
+  // and if no region was selected, we'd show all the countries
 
-  if (!search.country || search.country === '') filterdCountries = countries;
+  if ((!search.country || search.country === '') && !region)
+    filterdCountries = countries;
+  console.log();
 
   return (
     <>

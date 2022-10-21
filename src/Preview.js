@@ -14,18 +14,30 @@ export const Preview = props => {
             pathname: `/countries/${country.name.common}`,
           }}
         >
-          <img
+          <div
+            className="preview-flag-container"
+            style={{ backgroundImage: `url(${country.flags.png})` }}
+          >
+            {/* <img
             className="country__flag preview__flag"
             src={country?.flags.png}
             alt={country.name.common + ' flag'}
-          />
+          /> */}
+          </div>
           <div className="preview__info">
             <h3 className="preview__name">{country.name.common}</h3>
             <p className="preview__population">
-              Population: {country.population}
+              <span className="preview__headline"> Population:</span>{' '}
+              {new Intl.NumberFormat('en-IN').format(country.population)}
             </p>
-            <p className="preview__region">Region: {country.region}</p>
-            <p className="preview__capital">Capital: {country.capital}</p>
+            <p className="preview__region">
+              <span className="preview__headline"> Region:</span>{' '}
+              {country.region}
+            </p>
+            <p className="preview__capital">
+              <span className="preview__headline">Capital: </span>
+              {country.capital}
+            </p>
           </div>
         </Link>
       </div>

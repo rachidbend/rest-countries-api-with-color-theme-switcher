@@ -1,11 +1,7 @@
-import { useLocation, useNavigate } from 'react-router';
-import { useSearchParams } from 'react-router-dom';
 import { useCustomSearchParams } from './useCustomSearchParams';
 
 export const SearchFilter = () => {
   const [search, setSearch] = useCustomSearchParams();
-
-  console.log(search);
 
   const handleChanage = e => {
     const value = e.target.value;
@@ -24,3 +20,6 @@ export const SearchFilter = () => {
     />
   );
 };
+
+// when we search for something, then change the region, the search should reset
+// and when we selected a region, then start searching, the region should reset

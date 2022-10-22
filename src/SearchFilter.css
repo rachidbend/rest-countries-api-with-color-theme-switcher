@@ -23,3 +23,10 @@
   box-shadow: 0 0 6px #1e2b34;
   color: #fff;
 }
+
+@media (max-width: 600px) {
+  #search {
+    width: 240px;
+    padding-left: 24px;
+  }
+}

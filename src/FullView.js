@@ -84,7 +84,7 @@ export const FullView = () => {
               </p>
               <p className="country__languages">
                 <span className="info--headline">Languages:</span>{' '}
-                {Object.values(country.languages).map(lang => lang + ', ')}
+                {Object.values(country.languages).join(', ')}
               </p>
             </div>
           </div>

@@ -71,31 +71,33 @@
   font-size: 32px;
   margin-bottom: 32px;
 }
-.country__name--native {
-}
-.country__population {
-}
-.country__region {
-}
-.country__sub-region {
-}
-.country__capital {
-}
-.country__top-level-domain {
-}
-.country__currencies {
-}
-.country__languages {
-}
 
 .country__borders {
-}
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
 
+  gap: 10px;
+  height: auto;
+  align-items: center;
+}
 .country__border {
   color: #000;
-  margin-right: 6px;
+  margin-right: 10px;
   padding: 5px 26px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   border-radius: 4px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: content;
+}
+
+.theme-dark .country__info {
+  color: #fff;
+  /* 2B3743 */
+}
+
+.theme-dark .country__border {
+  background-color: #2b3743;
 }

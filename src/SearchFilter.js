@@ -1,4 +1,5 @@
 import { useCustomSearchParams } from './useCustomSearchParams';
+import './SearchFilter.css';
 
 export const SearchFilter = () => {
   const [search, setSearch] = useCustomSearchParams();
@@ -13,6 +14,7 @@ export const SearchFilter = () => {
 
   return (
     <input
+      id="search"
       type="text"
       placeholder="Search for a country..."
       onChange={handleChanage}

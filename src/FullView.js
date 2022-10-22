@@ -41,43 +41,69 @@ export const FullView = () => {
 
   return (
     <div className="fullview">
-      <button onClick={goBack}>back button</button>
-      <div className="country__flag">
-        <img src={country.flags.png} alt={country.name.common + ' flag'} />
-      </div>
-      <div className="country__info">
-        <h3 className="country__name">{country.name.common}</h3>
-        <p className="country__name--native">
-          Native Name: {Object.values(country.name.nativeName)[0].official}
-        </p>
-        <p className="country__population">Population: {country.population}</p>
-        <p className="country__region">Region: {country.region}</p>
-        <p className="country__sub-region">Sub Region: {country.subregion}</p>
-        <p className="country__capital">Capital: {country.capital[0]}</p>
-        <p className="country__top-level-domain">
-          Top Level Domain: {country.tld[0]}
-        </p>
-        <p className="country__currencies">
-          Currencies: {Object.values(country.currencies)[0].name}
-        </p>
-        <p className="country__languages">
-          Languages: {Object.values(country.languages).map(lang => lang + ', ')}
-        </p>
+      <button className="btn btn--back" onClick={goBack}>
+        <span className="back--arrow">&larr;</span>
+        Back
+      </button>
+      <div className="fullview__container">
+        <div className="country__flag">
+          <img src={country.flags.svg} alt={country.name.common + ' flag'} />
+        </div>
+        <div className="country__info">
+          <h3 className="country__name">{country.name.common}</h3>
+          <div className="country__info--container">
+            <div className="country__info-col">
+              <p className="country__name--native">
+                <span className="info--headline">Native Name:</span>{' '}
+                {Object.values(country.name.nativeName)[0].official}
+              </p>
+              <p className="country__population">
+                <span className="info--headline">Population:</span>{' '}
+                {new Intl.NumberFormat('en-IN').format(country.population)}
+              </p>
+              <p className="country__region">
+                <span className="info--headline">Region:</span> {country.region}
+              </p>
+              <p className="country__sub-region">
+                <span className="info--headline">Sub Region:</span>{' '}
+                {country.subregion}
+              </p>
+              <p className="country__capital">
+                <span className="info--headline">Capital:</span>{' '}
+                {country.capital[0]}
+              </p>
+            </div>
+            <div className="country__info-col">
+              <p className="country__top-level-domain">
+                <span className="info--headline">Top Level Domain:</span>{' '}
+                {country.tld[0]}
+              </p>
+              <p className="country__currencies">
+                <span className="info--headline">Currencies:</span>{' '}
+                {Object.values(country.currencies)[0].name}
+              </p>
+              <p className="country__languages">
+                <span className="info--headline">Languages:</span>{' '}
+                {Object.values(country.languages).map(lang => lang + ', ')}
+              </p>
+            </div>
+          </div>
 
-        <div>
-          border Countries:{' '}
-          {country.borders
-            ? borderingCountries.map(border => {
-                return (
-                  <Link
-                    className="country__border"
-                    to={{ pathname: `/countries/${border.name.common}` }}
-                  >
-                    {border.name.common}
-                  </Link>
-                );
-              })
-            : 'Is has no bordering countries'}
+          <div className="country__borders">
+            <span className="info--headline">Border Countries:</span>{' '}
+            {country.borders
+              ? borderingCountries.map(border => {
+                  return (
+                    <Link
+                      className="country__border"
+                      to={{ pathname: `/countries/${border.name.common}` }}
+                    >
+                      {border.name.common}
+                    </Link>
+                  );
+                })
+              : 'Is has no bordering countries'}
+          </div>
         </div>
       </div>
     </div>

@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router';
+import './RegionFilter.css';
 
 export const RegionFilter = () => {
   const navigate = useNavigate();
-  const { filter } = useParams();
+  const { region } = useParams();
+
   // using useEffect to always be able to get the options
   useEffect(() => {
     // selecting the options
@@ -13,14 +15,14 @@ export const RegionFilter = () => {
     const selectEurope = document.getElementById('europe');
     const selectOceania = document.getElementById('oceania');
     // when someone selects a country and goes back the select loses its selected state, and this is to make sure that the appropriate option is always selected
-    if (filter) {
-      if (filter === 'Africa') selectAfrica.selected = true;
-      if (filter === 'Americas') selectAmericas.selected = true;
-      if (filter === 'Asia') selectAsia.selected = true;
-      if (filter === 'Europe') selectEurope.selected = true;
-      if (filter === 'Oceania') selectOceania.selected = true;
+    if (region) {
+      if (region === 'Africa') selectAfrica.selected = true;
+      if (region === 'Americas') selectAmericas.selected = true;
+      if (region === 'Asia') selectAsia.selected = true;
+      if (region === 'Europe') selectEurope.selected = true;
+      if (region === 'Oceania') selectOceania.selected = true;
     }
-  }, [filter]);
+  }, [region]);
 
   // routing for the selected region
   const getSelectedRegion = () => {

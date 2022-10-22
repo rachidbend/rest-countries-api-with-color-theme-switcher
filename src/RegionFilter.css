@@ -1,0 +1,23 @@
+.region__container {
+  position: relative;
+  width: 200px;
+}
+
+#region {
+  height: 56px;
+  width: 200px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  padding-left: 25px;
+  box-shadow: 0px 0px 6px #f2f2f2;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.theme-dark #region {
+  background-color: #2b3743;
+  box-shadow: 0 0 6px #1e2b34;
+  color: #fff;
+}

@@ -6,7 +6,13 @@
   border-radius: 6px;
   overflow: hidden;
   font-size: 14px;
+  transition: all ease 200ms;
 }
+
+.preview:hover {
+  box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.1);
+}
+
 .preview__flag {
   width: auto;
   height: 160px;

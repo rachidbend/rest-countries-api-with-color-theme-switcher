@@ -14,10 +14,20 @@
   outline: none;
   border-radius: 6px;
   font-weight: 600;
+  outline: none;
+  appearance: none;
 }
 
 .theme-dark #region {
   background-color: #2b3743;
   box-shadow: 0 0 6px #1e2b34;
   color: #fff;
+}
+
+.icon-shevron-down {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 18px;
+  right: 14px;
 }

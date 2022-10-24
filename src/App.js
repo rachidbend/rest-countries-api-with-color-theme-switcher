@@ -33,39 +33,46 @@ function App() {
         <Route
           path={'/'}
           element={
-            <CountriesContext.Provider value={countries}>
-              <Header />
-              <Home />
-            </CountriesContext.Provider>
+            <div>
+              <CountriesContext.Provider value={countries}>
+                <Header />
+                <Home />
+              </CountriesContext.Provider>
+            </div>
           }
         />
         <Route
           path={'/countries/:country'}
           element={
-            <CountriesContext.Provider value={countries}>
-              <Header />
-
-              <FullView />
-            </CountriesContext.Provider>
+            <div className=" fullview-background">
+              <CountriesContext.Provider value={countries}>
+                <Header />
+                <FullView />
+              </CountriesContext.Provider>
+            </div>
           }
         />
         <Route
           path={'/region/:region'}
           element={
-            <CountriesContext.Provider value={countries}>
-              <Header />
-              <Home />
-            </CountriesContext.Provider>
+            <div>
+              <CountriesContext.Provider value={countries}>
+                <Header />
+                <Home />
+              </CountriesContext.Provider>
+            </div>
           }
         />
 
         <Route
           path={'/search/:search'}
           element={
-            <CountriesContext.Provider value={countries}>
-              <Header />
-              <Home />
-            </CountriesContext.Provider>
+            <div>
+              <CountriesContext.Provider value={countries}>
+                <Header />
+                <Home />
+              </CountriesContext.Provider>
+            </div>
           }
         ></Route>
       </Routes>

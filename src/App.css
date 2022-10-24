@@ -1,7 +1,14 @@
 .App {
-  /* background-color: hsl(0, 0%, 98%); */
+  background-color: hsl(0, 0%, 98%);
   min-height: 100vh;
-  /* font-family: 'Nunito Sans', sans-serif; */
+  font-family: 'Nunito Sans', sans-serif;
+}
+.fullview-background {
+  background-color: #fff;
+}
+
+.theme-dark .fullview-background {
+  /* background-color: #202d36; */
 }
 
 .btn {
@@ -16,35 +23,39 @@
   flex-direction: row;
   gap: 74px;
   padding: 0 80px;
-  background-color: hsl(0, 0%, 98%);
+  /* background-color: hsl(0, 0%, 98%); */
   padding-bottom: 74px;
   min-height: calc(100vh - (152px + 80px));
 
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .theme-dark {
   color: #fbffff;
+  background-color: #202d36;
 }
 .theme-dark a {
   color: #fbffff;
 }
 
 .filters__container {
-  padding: 0 80px;
-  padding-bottom: 48px;
-  padding-top: 48px;
+  padding: 48px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: hsl(0, 0%, 98%);
+  /* background-color: hsl(0, 0%, 98%); */
 }
 
-.theme-dark .filters__container {
-  background-color: #202d36;
-}
-.theme-dark .countries__container {
-  background-color: #202d36;
+@media (max-width: 1100px) {
+  .filters__container {
+    padding: 48px 60px;
+  }
+  .countries__container {
+    gap: 74px;
+    padding: 0 60px;
+    justify-content: space-around;
+  }
 }
 
 @media (max-width: 600px) {

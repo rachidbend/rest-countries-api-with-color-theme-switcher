@@ -6,8 +6,8 @@
   border-radius: 6px;
   overflow: hidden;
   font-size: 14px;
-  margin-right: auto;
-  transition: all ease 200ms;
+  /* margin-right: auto; */
+  transition: box-shadow ease 200ms;
 }
 
 .preview:hover {
@@ -43,7 +43,12 @@
 
 .theme-dark .preview {
   background-color: #2b3743;
-  box-shadow: 0 10px 10px #1e2b34;
+  box-shadow: 0 6px 6px rgb(31, 44, 53);
+}
+
+.theme-dark .preview:hover {
+  background-color: #2b3743;
+  box-shadow: 0 14px 14px rgb(28, 39, 47);
 }
 
 .theme-dark .preview__info {

@@ -61,6 +61,7 @@
 .country__flag img {
   width: 100%;
   height: auto;
+  box-shadow: 0 0 12px #b3c2d1;
 }
 
 .country__info {
@@ -118,6 +119,29 @@
 
 .theme-dark .country__border {
   background-color: #2b3743;
+}
+
+.theme-dark .country__flag img {
+  box-shadow: 0 0 12px #2b3743;
+}
+
+@media (max-width: 1200px) {
+  .country__info--container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 45px;
+    gap: 45px;
+  }
+  .fullview__container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 60px;
+    gap: 60px;
+  }
+  .country__flag {
+    padding-top: 80px;
+  }
 }
 
 @media (max-width: 600px) {

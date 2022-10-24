@@ -23,6 +23,10 @@
   box-shadow: 0 0 6px #1e2b34;
   color: #fff;
 }
+.theme-dark #search::placeholder {
+  color: #f2f2f2;
+}
+
 .search__container {
   position: relative;
 }
@@ -37,7 +41,11 @@
 
 @media (max-width: 600px) {
   #search {
-    width: 100%;
-    /* padding-left: 24px; */
+    width: calc(100vw - 32px);
+    height: 48px;
+    font-size: 12px;
+  }
+  .icon-search {
+    top: 14px;
   }
 }

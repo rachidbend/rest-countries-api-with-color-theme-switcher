@@ -31,3 +31,17 @@
   top: 18px;
   right: 14px;
 }
+
+@media (max-width: 600px) {
+  #region {
+    font-size: 12px;
+    height: 48px;
+  }
+  .icon-shevron-down {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 18px;
+    right: 14px;
+  }
+}

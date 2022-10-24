@@ -7,7 +7,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
 }
 
 .header__text p {
@@ -25,4 +24,14 @@
 }
 .theme-dark .header__text p {
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 80px;
+    padding: 0 16px;
+  }
+  .header__text p {
+    font-size: 14px;
+  }
 }

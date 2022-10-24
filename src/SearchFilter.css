@@ -39,6 +39,12 @@
   color: hsl(0, 0%, 52%);
 }
 
+@media (max-width: 840px) {
+  #search {
+    width: 240px;
+  }
+}
+
 @media (max-width: 600px) {
   #search {
     width: calc(100vw - 32px);
